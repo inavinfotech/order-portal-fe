@@ -23,7 +23,7 @@ function App() {
   return (
     <AuthProvider>
       <SettingsProvider>
-        <Router>
+        <Router basename="/order">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={
