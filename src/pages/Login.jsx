@@ -21,7 +21,7 @@ const Login = () => {
       const response = await api.post('/auth/login', { email, password });
       if (response.data.status === 'success') {
         login(response.data.email, response.data.access_token);
-        navigate('/');
+        navigate('/order/dashboard');
       }
     } catch (err) {
       setError(err.response?.data?.detail || 'Invalid Email or Password. Access Denied.');

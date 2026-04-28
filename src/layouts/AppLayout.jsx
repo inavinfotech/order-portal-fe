@@ -20,16 +20,16 @@ const AppLayout = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: "Dashboard", path: "/", icon: LayoutDashboard },
-    { name: "Applications", path: "/apps", icon: Box },
-    { name: "Orders", path: "/orders", icon: ShoppingBag },
-    { name: "Workflow", path: "/workflow", icon: GitMerge },
-    { name: "Settings", path: "/settings", icon: Settings },
+    { name: "Dashboard", path: "/order/dashboard", icon: LayoutDashboard },
+    { name: "Applications", path: "/order/apps", icon: Box },
+    { name: "Orders", path: "/order/orders", icon: ShoppingBag },
+    { name: "Workflow", path: "/order/workflow", icon: GitMerge },
+    { name: "Settings", path: "/order/settings", icon: Settings },
   ];
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/order/login");
   };
 
   return (

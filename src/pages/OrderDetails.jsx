@@ -67,7 +67,7 @@ const OrderDetails = () => {
     setTransitioning(true);
     try {
       await api.delete(`/orders/${id}`);
-      window.location.href = "/orders";
+      window.location.href = "/order/orders";
     } catch (err) {
       setError(err.response?.data?.detail || "Termination failed");
       setTransitioning(false);
@@ -115,7 +115,7 @@ const OrderDetails = () => {
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2 duration-500 max-w-5xl mx-auto print:space-y-4">
       <div className="flex items-center justify-between print:hidden">
         <Link
-          to="/orders"
+          to="/order/orders"
           className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
